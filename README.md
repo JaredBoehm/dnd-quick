@@ -1,4 +1,4 @@
-![logo](assets/img/logo.png)
+![logo](assets/img/logo_dark.png)
 
 Allow new players to D&amp;D to quickly and easily get set up.
 
