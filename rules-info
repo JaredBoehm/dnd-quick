@@ -1,0 +1,34 @@
+Generate Name, Race, Class, Allignment, Background
+Get stats for Strength, Dexterty, Constitution, intelligence, wisdom, charisma
+you get these stats by roling 4 d6 dice and removing the lowest dice and repeat 7 times then the player can take the 6 numbers and imput them themselves or have them randomly imputed
+Modifier = stat number - 10 then divide by 2 (always round number down)
+Proficiency bonus is calculated based on lvl 
+hit points at frist level, add your constitution modifier to the highest possible total of your class's assigned hit dice. ex clerik has a hit die of d8 and maybe you have a con modifier of 1 so hit points would be 9
+Armor class is dexterity modifier plus 10
+proficiency (unsure api will take care of)
+initiative modifier = to dexterity modifier
+speed = character based
+
+Example of game play
+Ex:1 Purchasing Weapon
+DM "your character walks into a shop and sees swords, shields, armor and other weapons of all kind." 
+DM Playing Shopkeeper "hello my good sir see anything that catches your eye today" 
+Player "hmm that sword over there looks very cool how much would that be" 
+Dm Playing shopkeeper "that would be 10 silver coins"
+Player to DM "is there anything special about the sword"
+Dm to Player "make an insight check, roll a d 20"
+Player rolls a 18 
+DM to player "the sword seems to have hiden powers inside of it but the shopkeeper doesn't seem to know this"
+Player to Shopkeeper "ill take the sword"
+
+Ex:2 Combat
+player comes upon a skeleton in the dungeon
+DM "roll initiative"
+(the player would roll a d20 and the skeleton would have a set initiative. whoever has the highest initiative will determine order of play)
+player rolls a 20 skeleton has initiative of 12 so player goes first
+DM to Player "how would you like to attack"
+Player "I swing my sword at the skeleton"
+DM to Player "roll to hit"
+Player (rolls d20 and gets a 15+2(proficiency bonus) the skeleton has an armor class of 10 so the attack hits)
+DM to player "your attack hits roll for damage"
+Player rolls 1d8 (adds any modifiers) and does that amount of damage to the skeleton.
