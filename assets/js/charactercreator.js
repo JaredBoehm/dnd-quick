@@ -1,30 +1,45 @@
-var barbarianCard = document.querySelector(".barbarian-card")
+var raceSelector = document.querySelector("#race")
+var raceSearchButton = document.querySelector("#race-search-button")
 
-function barbarianSearch(){
+var classSelector = document.querySelector("#class")
+var classSearchButton = document.querySelector("#class-search-button")
+
+function raceSearch() {
     fetch (
-        "https://www.dnd5eapi.co/api/classes/barbarian"
+        "https://www.dnd5eapi.co/api/races/" + raceSelector.value
+        ) .then(function(response){
+            return response.json()
+        }) .then(function(data){
+            console.log(data)
+        })
+}
+
+function classSearch(){
+    fetch (
+        "https://www.dnd5eapi.co/api/classes/" + classSelector.value
     ) .then(function(response){
         return response.json()
     }).then(function(data){
-        var barbarianInfo = {
+        var classInfo = {
             name: data.name,
             hitdie: data.hit_die,
             skills: data.proficiency_choices[0].desc,
             proficiencies: data.proficiencies,
             savingthrows: data.saving_throws,            
         }
-        console.log(barbarianInfo.name)
-        console.log(barbarianInfo.hitdie)
-        console.log(barbarianInfo.skills)
-        for (var i = 0; i < barbarianInfo.proficiencies.length; i++) {
-            var barbarianProficiencies = barbarianInfo.proficiencies[i]
-            console.log(barbarianProficiencies.name)
+        console.log(classInfo.name)
+        console.log(classInfo.hitdie)
+        console.log(classInfo.skills)
+        for (var i = 0; i < classInfo.proficiencies.length; i++) {
+            var classProficiencies = classInfo.proficiencies[i]
+            console.log(classProficiencies.name)
         }
-        for (var i = 0; i < barbarianInfo.savingthrows.length; i++) {
-            var barbarianSavingThrows = barbarianInfo.savingthrows[i]
-            console.log(barbarianSavingThrows.name)
+        for (var i = 0; i < classInfo.savingthrows.length; i++) {
+            var classSavingThrows = classInfo.savingthrows[i]
+            console.log(classSavingThrows.name)
         }
-        // barbarianCard.innerHTML=barbarianInfo.name
     })
 }
-barbarianSearch()
+
+raceSearchButton.addEventListener("click", () => raceSearch())
+classSearchButton.addEventListener("click", () => classSearch())

@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Creator | D&D Quick</title>
-</head>
-<body>
-    <div class="barbarian-card"></div>
-    <script src="/assets/js/charactercreator.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Character Creator | D&D Quick</title>
+    </head>
+    <body>
+        <div>
+            <label for="race">Choose a race:</label>
+            <select name="race" id="race">
+                <option value="elf">Elf</option>
+                <option value="human">Human</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="halfling">Halfling</option>
+                <option value="gnome">Gnome</option>
+                <option value="half-elf">Half-Elf</option>
+                <option value="half-orc">Half-Orc</option>
+                <option value="dragonborn">Dragonborn</option>
+                <option value="tiefling">Tiefling</option>
+            </select>
+            <button id="race-search-button">Search</button>
+        </div>
+        <div>
+            <label for="class">Choose a class:</label>
+            <select name="class" id="class">
+                <option value="barbarian ">Barbarian</option>
+                <option value="bard">Bard</option>
+                <option value="cleric">Cleric</option>
+                <option value="druid">Druid</option>
+                <option value="fighter">Fighter</option>
+                <option value="monk">Monk</option>
+                <option value="paladin">Paladin</option>
+                <option value="ranger">Ranger</option>
+                <option value="rogue">Rouge</option>
+                <option value="sorcerer">Sorcerer</option>
+                <option value="warlock">Warlock</option>
+                <option value="wizard">Wizard</option>
+            </select>
+            <button id="class-search-button">Search</button>
+        </div>
+        <script src="/assets/js/charactercreator.js"></script>
+    </body>
 </html>
