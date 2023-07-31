@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./assets/js/landing.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Landing Page | D&D Quick</title>
 </head>
-<body>
-    <a href="charactercreator/index.html">Character Creator</a>
+<body class="bg-slate-900 text-slate-50 flex flex-col text-center">
+
+    <main class="flex flex-col items-center justify-center min-h-screen">
+
+        <section class="">
+            <img title="D&D Quick Logo" class="p-2" src="./assets/img/logo.png" alt="D&D Quick">
+        </section>
+
+        <section class="p-8 mx-16 mb-4 mt-16 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
+            <div class="flex justify-between items-center transition-all duration-300 ease-in-out">
+                <h1 class="font-semibold text-xl">What is D&D?</h1>
+                <img class="h-3 transition-all duration-300 ease-in-out" src="./assets/img/dropdown.png" alt="Dropdown Icon">
+            </div>
+            <div class="max-h-0 transition-all duration-300 ease-in-out overflow-hidden">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </section>
+
+        <section class="p-8 mx-16 mb-4 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
+            <div class="flex justify-between items-center transition-all duration-300 ease-in-out">
+                <h1 class="font-semibold text-xl">How do dice work?</h1>
+                <img class="h-3 transition-all duration-300 ease-in-out" src="./assets/img/dropdown.png" alt="Dropdown Icon">
+            </div>
+            <div class="max-h-0 transition-all duration-300 ease-in-out overflow-hidden">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </section>
+
+        <section class="p-8 mx-16 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
+            <div class="flex justify-between items-center transition-all duration-300 ease-in-out">
+                <h1 class="font-semibold text-xl">How do I make a character?</h1>
+                <img class="h-3 transition-all duration-300 ease-in-out" src="./assets/img/dropdown.png" alt="Dropdown Icon">
+            </div>
+            <div class="max-h-0 transition-all duration-300 ease-in-out overflow-hidden">
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-950 p-10 text-xs">
+        <p>© Nobody, 2023</p>
+        <p>All trademarks, logos and brand names are the property of their respective owners.</p>
+    </footer> 
+
 </body>
 </html>
