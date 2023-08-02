@@ -85,3 +85,35 @@ function classSearch() {
 
 raceSearchButton.addEventListener("click", () => raceSearch())
 classSearchButton.addEventListener("click", () => classSearch())
+
+
+// character sheet object
+let characterSheets = [] // save this to local storage, the last characterSheet object in the array will be the last creation session (to save creation progress) 
+let characterSheet = {
+    name: '',
+    race: '',
+    class: '',
+
+}
+
+
+// // generic select generator
+
+let testArray = ['class','class something','option 3','apple','yo']
+
+// TODO: can probably use this on any iterable object, not just arrays
+function createOptionList(optionArray) {
+    let wrapper = document.createElement('div')
+    wrapper.classList.add('select')
+
+    let select = document.createElement('select')
+
+    optionArray.forEach(optionString => {
+        let option = document.createElement('option')
+        option.innerText = optionString
+        select.append(option)
+    });
+
+    wrapper.append(select)
+    document.body.append(wrapper)
+}
