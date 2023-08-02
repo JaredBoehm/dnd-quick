@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./assets/js/landing.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="assets\css\style.css">
     <title>Landing Page | D&D Quick</title>
 </head>
 <body class="bg-slate-900 text-slate-50 flex flex-col text-center">
 
     <header class="p-4 flex justify-center gap-10">
         <a class="hover:underline" href="./charactercreator">Create A Character</a>
-        <a class="hover:underline" href="./README.md">About</a>
+        <a class="hover:underline" href="./about">About Us</a>
         <a class="hover:underline" href="https://github.com/JaredBoehm/dnd-quick" target="_blank">View on Github</a>
     </header>
 
@@ -23,6 +22,20 @@
         </section>
 
         <section class="p-8 mx-16 mb-4 mt-16 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
+            <div class="flex justify-between items-center transition-all duration-300 ease-in-out">
+                <h1 class="font-semibold text-xl">What is D&D Quick?</h1>
+                <img class="h-3 transition-all duration-300 ease-in-out" src="./assets/img/dropdown.png" alt="Dropdown Icon">
+            </div>
+            <div class="max-h-0 transition-all duration-300 ease-in-out overflow-hidden">
+                <p>
+                In D&D one of the most time consuming setup processes, and potential hurdles for people new to the D&D, is creating your character sheet. 
+                D&D Quick is a small web application that drastically simplifies this process by mostly automating the steps needed to correctly fill out a character sheet. 
+                It's developed with the primary goal of getting you ready for the table with just a few easy to understand clicks.
+                </p>
+            </div>
+        </section>
+
+        <section class="p-8 mx-16 mb-4 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
             <div class="flex justify-between items-center transition-all duration-300 ease-in-out">
                 <h1 class="font-semibold text-xl">What is D&D?</h1>
                 <img class="h-3 transition-all duration-300 ease-in-out" src="./assets/img/dropdown.png" alt="Dropdown Icon">
