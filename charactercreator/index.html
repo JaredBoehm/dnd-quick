@@ -2,11 +2,6 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <style> @import url(https://fonts.googleapis.com/css2?family=Lugrasimo&family=Roboto:wght@100&display=swap);
-            *{
-                font-family: 'Lugrasimo', cursive;
-            }
-        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Character Creator | D&D Quick</title>
     </head>
@@ -24,10 +19,14 @@
                 <option value="dragonborn">Dragonborn</option>
                 <option value="tiefling">Tiefling</option>
             </select>
-            <button id="race-search-button">Search</button>
         </div>
-        <div>
-            <label for="class">Choose a class:</label>
+        <button class="button" id="race-search-button">Search</button>
+    </section>
+
+    <section class="section column is-one-third is-offset-one-third">
+        <label for="class">Choose a class:</label>
+        <br>
+        <div class="select">
             <select name="class" id="class">
                 <option value="barbarian ">Barbarian</option>
                 <option value="bard">Bard</option>
@@ -42,8 +41,14 @@
                 <option value="warlock">Warlock</option>
                 <option value="wizard">Wizard</option>
             </select>
-            <button id="class-search-button">Search</button>
         </div>
-        <script src="/assets/js/charactercreator.js"></script>
-    </body>
+        <button class="button" id="class-search-button">Search</button>
+    </section>
+
+</body>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/diceroller.js"></script>
+<script src="../assets/js/randomname.js"></script>
+<script src="../assets/js/charactercreator.js"></script>
+
 </html>
