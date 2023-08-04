@@ -12,7 +12,7 @@ let characterSheet = {
     class: '', // classSelector.value
     classInfo: {}, // api call
     stats: {},
-    modifiers: {},  
+    modifiers: {},
     bonuses: [],
     hitpoints: 0,
     skills: [], //an array of strings
@@ -26,7 +26,7 @@ var classSelector = document.querySelector("#class")
 var classSearchButton = document.querySelector("#class-search-button")
 var rollDice = document.querySelector("#rolldice")
 var characterRace = document.getElementById("characterRace")
-var characterClass = document.getElementById("characterClass")
+// var characterClass = document.getElementById("characterClass")
 
 // Functions
 
@@ -55,12 +55,12 @@ function raceSearch() {
 
             let bonusName = raceInfo.bonus[i].ability_score.name
             let bonusAmt = raceInfo.bonus[i].bonus
-            
+
             var bonusInfo = ("Bonus To: " + bonusName + " of " + bonusAmt)
             console.log(bonusInfo)
 
-            characterSheet.bonuses.push( { bonusName, bonusAmt } ) 
-    
+            characterSheet.bonuses.push({ bonusName, bonusAmt })
+
         }
 
         for (var i = 0; i < raceInfo.proficiencies.length; i++) {
@@ -86,7 +86,7 @@ function classSearch() {
     ).then(function (response) {
         return response.json()
     }).then(function (data) {
-        // console.log(data)
+        console.log(data)
         var classInfo = {
             name: data.name,
             hitdie: data.hit_die,
@@ -94,20 +94,30 @@ function classSearch() {
             skills: data.proficiency_choices[0].from.options,
             proficiencies: data.proficiencies,
             savingthrows: data.saving_throws,
-            equipment: data.starting_equipment, 
+            equipment: data.starting_equipment,
             //future feature: add fetch for starting equipment options
             //future feature: add fetch for magic using classes to list starting spells
-
         }
+
         characterSheet.classInfo = classInfo
-        localStorage.setItem("hitdie", JSON.stringify(classInfo.hitdie))
+
+        // localStorage.setItem("hitdie", JSON.stringify(classInfo.hitdie))
         console.log("Name: " + classInfo.name)
         console.log("Hit Die: " + classInfo.hitdie)
         console.log("Choose Skills: " + classInfo.skillsChoice)
+
+        var skillList = ""
+        var skillsChoice = document.querySelector(".skillschoice")
+        var numberOfSkills = document.querySelector("#numberofskills")
+        
+        numberOfSkills.textContent = classInfo.skillsChoice
+
         for (var i = 0; i < classInfo.skills.length; i++) {
-            var classSkills = classInfo.skills[i]
-            console.log(classSkills.item.name)
+            var classSkills = classInfo.skills[i].item.name
+              skillList += `<option>${classSkills}</option>`;
+            skillsChoice.innerHTML = skillList
         }
+
         for (var i = 0; i < classInfo.proficiencies.length; i++) {
             var classProficiencies = classInfo.proficiencies[i]
             console.log("Proficiencies: " + classProficiencies.name)
@@ -151,7 +161,7 @@ function getStats() {
 
     var armorClass = modifiersObject.dex + 10
     console.log("AC: " + armorClass)
-    
+
     var hitPoints = characterSheet.classInfo.hitdie + modifiersObject.con
     console.log(typeof characterSheet.classInfo.hitdie)
     console.log("HP: " + hitPoints)
@@ -163,20 +173,20 @@ function getStats() {
 rollDice.addEventListener("click", () => getStats())
 raceSearchButton.addEventListener("click", () => raceSearch())
 classSearchButton.addEventListener("click", () => classSearch())
-raceSearchButton.addEventListener("click", raceSearchEl)
-classSearchButton.addEventListener("click", classSearchEl)
+// raceSearchButton.addEventListener("click", raceSearchEl)
+// classSearchButton.addEventListener("click", classSearchEl)
 
 // Class and Race Search Event Functions
 
-function raceSearchEl(event) {
-    console.log(event)
-    characterRace.classList.remove("hide")
-}
+// function raceSearchEl(event) {
+//     console.log(event)
+//     characterRace.classList.remove("hide")
+// }
 
-function classSearchEl(event) {
-    console.log(event)
-    characterClass.classList.remove("hide")
-}
+// function classSearchEl(event) {
+//     console.log(event)
+//     characterClass.classList.remove("hide")
+// }
 
 // // Generic Select Generator
 
