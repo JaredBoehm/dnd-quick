@@ -4,65 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <style>
-        * {
-            background-color: #0f172a !important;
-            color: #f8fafc !important;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Character Creator | D&D Quick</title>
 </head>
 
-<body>
+<body class="bg-slate-900 text-slate-50 flex flex-col text-center gap-6">
 
-    <section class="section column is-one-third is-offset-one-third">
+    <header>
+        <nav class="flex flex-col items-center">
+            <a href="../"><img title="D&D Quick Logo" class="p-4 h-24" src="../assets/img/logo.png" alt="D&D Quick"></a>
+        </nav>
+    </header>
+
+    <section class="flex flex-col items-center">
+        <h1 class="text-xl pb-6">Create Your Character</h1>
         <label for="race">Choose a name:</label>
-        <br>
-        <input class="input" type="text">
+        <div class="w-fit relative">
+            <img src="../assets/img/random.png" alt="Random Name Icon" id="random-name" class="h-6 p-px cursor-pointer absolute top-6 left-6">
+            <input class="bg-slate-950/50 focus:bg-slate-950 rounded-md bg-slate-900 py-2 px-10 outline-none m-4 transition-all text-center" id="character-name" type="text">
+        </div>
     </section>
 
-    <section class="section column is-one-third is-offset-one-third">
+    <section>
+
         <label for="race">Choose a race:</label>
-        <br>
-        <div class="select">
-            <select name="race" id="race">
-                <option value="elf">Elf</option>
-                <option value="human">Human</option>
-                <option value="dwarf">Dwarf</option>
-                <option value="halfling">Halfling</option>
-                <option value="gnome">Gnome</option>
-                <option value="half-elf">Half-Elf</option>
-                <option value="half-orc">Half-Orc</option>
-                <option value="dragonborn">Dragonborn</option>
-                <option value="tiefling">Tiefling</option>
-            </select>
-        </div>
-        <button class="button" id="race-search-button">Search</button>
+        <select class="hover:cursor-pointer rounded-lg bg-slate-900 px-6 outline-none" name="race" id="race">
+            <option value="elf">Elf</option>
+            <option value="human">Human</option>
+            <option value="dwarf">Dwarf</option>
+            <option value="halfling">Halfling</option>
+            <option value="gnome">Gnome</option>
+            <option value="half-elf">Half-Elf</option>
+            <option value="half-orc">Half-Orc</option>
+            <option value="dragonborn">Dragonborn</option>
+            <option value="tiefling">Tiefling</option>
+        </select>
+
+        <section class="p-4 mx-4 flex flex-col items-center">
+            <div class="p-4 bg-slate-950/50 rounded-lg max-w-lg" id="race-info">
+                <p>Race Info</p>
+                <p>This is some test info. It just needs to be large enough to hit the max width so I can see how it looks. This is some test info. It just needs to be large enough to hit the max width so I can see how it looks.</p>
+            </div>
+        </section>
+
     </section>
 
-    <section class="section column is-one-third is-offset-one-third">
+    <section>
+
         <label for="class">Choose a class:</label>
-        <br>
-        <div class="select">
-            <select name="class" id="class">
-                <option value="barbarian ">Barbarian</option>
-                <option value="bard">Bard</option>
-                <option value="cleric">Cleric</option>
-                <option value="druid">Druid</option>
-                <option value="fighter">Fighter</option>
-                <option value="monk">Monk</option>
-                <option value="paladin">Paladin</option>
-                <option value="ranger">Ranger</option>
-                <option value="rogue">Rouge</option>
-                <option value="sorcerer">Sorcerer</option>
-                <option value="warlock">Warlock</option>
-                <option value="wizard">Wizard</option>
-            </select>
-        </div>
-        <button class="button" id="class-search-button">Search</button>
+        <select class="hover:cursor-pointer rounded-lg bg-slate-900 px-6 outline-none" name="class" id="class">
+            <option value="barbarian ">Barbarian</option>
+            <option value="bard">Bard</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
+            <option value="fighter">Fighter</option>
+            <option value="monk">Monk</option>
+            <option value="paladin">Paladin</option>
+            <option value="ranger">Ranger</option>
+            <option value="rogue">Rouge</option>
+            <option value="sorcerer">Sorcerer</option>
+            <option value="warlock">Warlock</option>
+            <option value="wizard">Wizard</option>
+        </select>
+
+        <section class="p-4 mx-4 flex flex-col items-center">
+            <div class="p-4 bg-slate-950/50 rounded-lg max-w-lg" id="class-info">
+                <p>Class Info</p>
+                <p>This is some test info. It just needs to be large enough to hit the max width so I can see how it looks. This is some test info. It just needs to be large enough to hit the max width so I can see how it looks.</p>
+            </div>
+        </section>
+
     </section>
-    <button id="rolldice">Roll Dice!</button>
+
+    <section>
+        <button class="border p-2 px-4 rounded-lg hover:bg-slate-50 hover:text-slate-900 transition-all" id="rolldice">Roll Dice!</button>
+        <section class="p-4 mx-4 flex flex-col items-center">
+            <div class="p-4 bg-slate-950/50 rounded-lg max-w-lg" id="class-info">
+                <p>Rolled Stats</p>
+                <ul>
+                    <li>STR: 50</li>
+                    <li>DEX: 50</li>
+                    <li>CON: 50</li>
+                </ul>
+            </div>
+        </section>
+    </section>
+
 </body>
 <script src="../assets/js/data.js"></script>
 <script src="../assets/js/diceroller.js"></script>
