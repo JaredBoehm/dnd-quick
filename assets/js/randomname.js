@@ -1,3 +1,7 @@
+let characterName = document.querySelector('#character-name')
+let randomName = document.querySelector('#random-name')
+let randomNamesArray = backupNamesArray
+
 async function getRandomNames() {
     try {
         let response = await fetch('https://api.fungenerators.com/name/generate.json?category=shakespearean&limit=10')
@@ -5,16 +9,16 @@ async function getRandomNames() {
         if (!response.ok) {
             throw Error(response.statusText)
         }
-        return names
+        names.contents.names.forEach(name => {
+            randomNamesArray.push(name)
+        });
     } catch (error) {
         console.log(error)
-        return backupNames
     }
 }
+getRandomNames()
 
-// needs to be implemented
-async function writeToDom() {
-    let names = await getRandomNames()
-    console.log(names)
-}
-writeToDom()
+randomName.addEventListener('click', () => {
+    let randomIndex = Math.floor(Math.random() * randomNamesArray.length)
+    characterName.value = randomNamesArray[randomIndex]
+})
