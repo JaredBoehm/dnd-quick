@@ -1,5 +1,10 @@
+
 function generateRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min
+}
+
+function rollStat() {
+    return generateRandomNumber(10, 18) // currently preferred
 }
 
 // function rollDice(min, max, amount) { 
@@ -18,8 +23,4 @@ function generateRandomNumber(min, max) {
 //     })
 //     return sum
 // }
-
-function rollStat() {
-    return generateRandomNumber(10, 18) // currently preferred
-}
 

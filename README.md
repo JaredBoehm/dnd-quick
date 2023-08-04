@@ -1,3 +1,4 @@
+
 ![logo](assets/img/logo_dark.png)
 
 ## Description
@@ -18,4 +19,4 @@ The end result can be viewed [here.](https://jaredboehm.github.io/dnd-quick/)
 
 ## License
 
-NA
+@Copright 2023 Connor Bishop, Tim Morgan, Jared Boehm and Michael Miazza, Inc

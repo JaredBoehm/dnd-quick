@@ -1,7 +1,8 @@
+
 function accordion(el) {
+    
     let accordionHead = el.firstElementChild
     let accordionBody = el.lastElementChild
-
     let dropdown = accordionHead.querySelector('img')
 
     if (accordionBody.style.maxHeight) {

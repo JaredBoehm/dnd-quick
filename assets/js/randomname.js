@@ -1,3 +1,4 @@
+
 async function getRandomNames() {
     try {
         let response = await fetch('https://api.fungenerators.com/name/generate.json?category=shakespearean&limit=10')
@@ -12,7 +13,8 @@ async function getRandomNames() {
     }
 }
 
-// needs to be implemented
+// Needs to be implemented
+
 async function writeToDom() {
     let names = await getRandomNames()
     console.log(names)

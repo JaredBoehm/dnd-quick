@@ -1,0 +1,70 @@
+a {
+    padding: 10px;
+    position: absolute;
+    left: 45%;
+    padding: 8px;
+    margin-left: 20px;
+}
+
+a button {
+    border-radius: 10px;
+    font-weight: 800;
+    background-color: rgb(54, 50, 50);
+    color: white;
+}
+
+
+body div {
+    box-sizing: border-box;
+    align-items: center;
+    font-family: 'Old English Five', sans-serif;
+    padding: 25px;
+    color: white;
+}
+
+body {
+    background-color: rgb(23, 29, 52);
+}
+
+section {
+    align-items: center;
+    position: absolute;
+    bottom: 50%;
+    left: 35%;
+    font-size: 125%;
+    font-weight: 800;
+}
+
+select {
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    background-color: rgb(54, 50, 50);
+    color: white;
+}
+
+select:hover {
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    background-color: rgb(54, 50, 50);
+}
+
+div button {
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    background-color: rgb(54, 50, 50);
+    color: white;
+}
+
+div button:hover {
+    padding: 8px;
+    margin-left: 20px;
+    border-radius: 10px;
+    font-weight: 800;
+    background-color: rgb(54, 50, 50);
+}
