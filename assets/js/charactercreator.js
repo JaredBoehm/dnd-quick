@@ -14,6 +14,8 @@ let characterSheet = {
     stats: {},
     modifiers: {},  
     bonuses: [],
+    hitpoints: 0,
+    skills: [], //an array of strings
 }
 
 //Variables
@@ -133,7 +135,7 @@ function getStats() {
     }
     console.log(statsObject)
 
-    characterSheet.stats = statsArray
+    characterSheet.stats = statsObject
 
     var modifiersObject = {
         str: Math.floor((statsObject.str - 10) / 2),
@@ -150,8 +152,10 @@ function getStats() {
     var armorClass = modifiersObject.dex + 10
     console.log("AC: " + armorClass)
     
-    var hitPoints = characterSheet.classInfo.hitPoints + modifiersObject.con
+    var hitPoints = characterSheet.classInfo.hitdie + modifiersObject.con
+    console.log(typeof characterSheet.classInfo.hitdie)
     console.log("HP: " + hitPoints)
+    characterSheet.hitpoints = hitPoints
 }
 
 // Event Listeners
