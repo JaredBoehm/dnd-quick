@@ -29,6 +29,7 @@
 
         <label for="race">Choose a race:</label>
         <select class="hover:cursor-pointer rounded-lg bg-slate-900 px-6 outline-none" name="race" id="race">
+            <option value="select">Select</option>
             <option value="elf">Elf</option>
             <option value="human">Human</option>
             <option value="dwarf">Dwarf</option>
@@ -41,9 +42,13 @@
         </select>
 
         <section class="p-4 mx-4 flex flex-col items-center">
-            <div class="p-4 bg-slate-950/50 rounded-lg max-w-lg" id="race-info">
-                <p>Race Info</p>
-                <p>This is some test info. It just needs to be large enough to hit the max width so I can see how it looks. This is some test info. It just needs to be large enough to hit the max width so I can see how it looks.</p>
+            <div class="w-full md:w-[80ch] p-4 bg-slate-950/50 rounded-md flex flex-col text-left">
+                <div>
+                    <span id="race-info">
+                        <p>Select a race above to see information about it!</p>
+                    </span>
+                    <span id="race-details"></span>
+                </div>
             </div>
         </section>
 
@@ -53,7 +58,8 @@
 
         <label for="class">Choose a class:</label>
         <select class="hover:cursor-pointer rounded-lg bg-slate-900 px-6 outline-none" name="class" id="class">
-            <option value="barbarian ">Barbarian</option>
+            <option value="select">Select</option>
+            <option value="barbarian">Barbarian</option>
             <option value="bard">Bard</option>
             <option value="cleric">Cleric</option>
             <option value="druid">Druid</option>
@@ -68,26 +74,30 @@
         </select>
 
         <section class="p-4 mx-4 flex flex-col items-center">
-            <div class="p-4 bg-slate-950/50 rounded-lg max-w-lg" id="class-info">
-                <p>Class Info</p>
-                <p>This is some test info. It just needs to be large enough to hit the max width so I can see how it looks. This is some test info. It just needs to be large enough to hit the max width so I can see how it looks.</p>
+            <div class="w-full md:w-[80ch] p-4 bg-slate-950/50 rounded-md flex text-left gap-2 flex-wrap">
+                <div class="w-full">
+                    <span id="class-info">
+                        <p>Select a class above to see information about it!</p>
+                    </span>
+                    <span id="class-skills"></span>
+                </div>
             </div>
         </section>
 
     </section>
 
-    <section>
-        <button class="border p-2 px-4 rounded-lg hover:bg-slate-50 hover:text-slate-900 transition-all" id="rolldice">Roll Dice!</button>
-        <section class="p-4 mx-4 flex flex-col items-center">
-            <div class="p-4 bg-slate-950/50 rounded-lg max-w-lg" id="class-info">
-                <p>Rolled Stats</p>
-                <ul>
-                    <li>STR: 50</li>
-                    <li>DEX: 50</li>
-                    <li>CON: 50</li>
-                </ul>
+    <section class="p-4 mx-4 flex flex-col items-center">
+        <button class="border p-2 px-4 mb-4 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-all" id="rolldice">Roll Dice!</button>
+        <div class="w-full md:w-[80ch] p-4 bg-slate-950/50 rounded-md flex gap-4 text-left flex-wrap">
+            <div class="w-full" id="stat-info">
+                <p>Click the roll dice button to get you stats!</p>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <section class="mb-20">
+        <button class="border p-2 px-4 mb-4 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-all disabled:text-slate-50 disabled:border-slate-800 disabled:bg-slate-900 disabled:cursor-not-allowed" id="save-character" disabled>Save Character</button>
+        <button class="border p-2 px-4 mb-4 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-all" id="view-saved-characters">View Saved Characters</button>
     </section>
 
 </body>
