@@ -42,11 +42,13 @@
         </select>
 
         <section class="p-4 mx-4 flex flex-col items-center">
-            <div class="p-4 bg-slate-950/50 rounded-md max-w-lg text-left">
-                <span id="race-info">
-                    <p>Select a race above to see information about it!</p>
-                </span>
-                <span id="race-details"></span>
+            <div class="w-full md:w-[80ch] p-4 bg-slate-950/50 rounded-md flex flex-col text-left">
+                <div>
+                    <span id="race-info">
+                        <p>Select a race above to see information about it!</p>
+                    </span>
+                    <span id="race-details"></span>
+                </div>
             </div>
         </section>
 
@@ -72,11 +74,13 @@
         </select>
 
         <section class="p-4 mx-4 flex flex-col items-center">
-            <div class="p-4 bg-slate-950/50 rounded-md max-w-lg flex justify-center text-left">
-                <span id="class-info">
-                    <p>Select a class above to see information about it!</p>
-                </span>
-                <span id="class-skills"></span>
+            <div class="w-full md:w-[80ch] p-4 bg-slate-950/50 rounded-md flex text-left gap-2 flex-wrap">
+                <div class="w-full">
+                    <span id="class-info">
+                        <p>Select a class above to see information about it!</p>
+                    </span>
+                    <span id="class-skills"></span>
+                </div>
             </div>
         </section>
 
@@ -84,9 +88,16 @@
 
     <section class="p-4 mx-4 flex flex-col items-center">
         <button class="border p-2 px-4 mb-4 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-all" id="rolldice">Roll Dice!</button>
-        <div class="p-4 bg-slate-950/50 rounded-md max-w-lg flex gap-10 text-left" id="stat-info">
-            <p>Click the roll dice button to get you stats!</p>
+        <div class="w-full md:w-[80ch] p-4 bg-slate-950/50 rounded-md flex gap-4 text-left flex-wrap">
+            <div class="w-full" id="stat-info">
+                <p>Click the roll dice button to get you stats!</p>
+            </div>
         </div>
+    </section>
+
+    <section class="mb-20">
+        <button class="border p-2 px-4 mb-4 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-all disabled:text-slate-50 disabled:border-slate-800 disabled:bg-slate-900 disabled:cursor-not-allowed" id="save-character" disabled>Save Character</button>
+        <button class="border p-2 px-4 mb-4 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-all" id="view-saved-characters">View Saved Characters</button>
     </section>
 
 </body>
