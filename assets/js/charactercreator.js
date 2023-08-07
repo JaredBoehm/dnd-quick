@@ -157,7 +157,7 @@ function classSearch() {
             </div>
             `
 
-            console.log(classSkills.item.name)
+
         }
 
         // class proficiencies
@@ -165,7 +165,7 @@ function classSearch() {
             let classProficiencies = classInfo.proficiencies[i]
             if (!classProficiencies.name.match("Saving")) { // skip the saving throws, these are displayed later
                 classInfoElement.innerHTML += 'Proficiency: ' + classProficiencies.name + '<br>'
-                console.log('Proficiencies: ' + classProficiencies.name)
+
             }
         }
         classInfoElement.innerHTML += '<br>'
@@ -174,7 +174,7 @@ function classSearch() {
         for (let i = 0; i < classInfo.savingthrows.length; i++) {
             let classSavingThrows = classInfo.savingthrows[i]
             classInfoElement.innerHTML += 'Saving Throw: ' + classSavingThrows.name + '<br>'
-            console.log('Saving Throws: ' + classSavingThrows.name)
+
         }
         classInfoElement.innerHTML += '<br>'
 
@@ -182,7 +182,7 @@ function classSearch() {
         for (let i = 0; i < classInfo.equipment.length; i++) {
             let classEquipment = classInfo.equipment[i]
             classInfoElement.innerHTML += 'Starting Equipment: ' + classEquipment.equipment.name + '<br>'
-            console.log('Starting Equipment: ' + classEquipment.equipment.name)
+
         }
 
 

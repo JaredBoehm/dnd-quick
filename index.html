@@ -9,7 +9,7 @@
 </head>
 <body class="bg-slate-900 text-slate-50 flex flex-col text-center">
 
-    <header class="p-4 flex justify-center gap-10">
+    <header class="p-4 flex justify-center gap-4 md:gap-10">
         <a class="hover:underline" href="./charactercreator">Create A Character</a>
         <a class="hover:underline" href="./about">About Us</a>
         <a class="hover:underline" href="https://github.com/JaredBoehm/dnd-quick" target="_blank">View on Github</a>
@@ -21,51 +21,64 @@
             <img title="D&D Quick Logo" class="p-2 mt-8" src="./assets/img/logo.png" alt="D&D Quick">
         </section>
 
-        <section class="p-8 mx-16 mb-4 mt-16 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
+        <section class="p-8 mx-6 mb-4 mt-16 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
             <div class="flex justify-between items-center transition-all duration-300 ease-in-out">
                 <h1 class="font-semibold text-xl">What is D&D Quick?</h1>
                 <img class="h-3 transition-all duration-300 ease-in-out" src="./assets/img/dropdown.png" alt="Dropdown Icon">
             </div>
             <div class="max-h-0 transition-all duration-300 ease-in-out overflow-hidden text-left">
                 <p>
-                In D&D one of the most time consuming setup processes, and potential hurdles for people new to the D&D, is creating your character sheet. 
-                D&D Quick is a small web application that drastically simplifies this process by mostly automating the steps needed to correctly fill out a character sheet. 
-                It's developed with the primary goal of getting you ready for the table with just a few easy to understand clicks.
+                In D&D one of the most time consuming setup processes and potential hurdles for players new to D&D is creating your character sheet. 
+                D&D Quick is a small web application that drastically simplifies this process by automating most of the steps needed to correctly fill out a character sheet. 
+                It's developed with the primary goal of getting you ready for the table in just a few easy to understand clicks.
                 </p>
             </div>
         </section>
 
-        <section class="p-8 mx-16 mb-4 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
+        <section class="p-8 mx-6 mb-4 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
             <div class="flex justify-between items-center transition-all duration-300 ease-in-out">
                 <h1 class="font-semibold text-xl">What is D&D?</h1>
                 <img class="h-3 transition-all duration-300 ease-in-out" src="./assets/img/dropdown.png" alt="Dropdown Icon">
             </div>
             <div class="max-h-0 transition-all duration-300 ease-in-out overflow-hidden text-left">
                 <p>
-                Dungeons & Dragons (commonly abbreviated as D&D or DnD) is a fantasy tabletop role-playing game (RPG) originally designed by Gary Gygax and Dave Arneson.
-                The game was first published in 1974 by Tactical Studies Rules, Inc. (TSR). It has been published by Wizards of the Coast (now a subsidiary of Hasbro) since 1997. 
-                The game was derived from miniature wargames, with a variation of the 1971 game Chainmail serving as the initial rule system.
-                D&D's publication is commonly recognized as the beginning of modern role-playing games and the role-playing game industry, 
-                and also deeply influenced video games, especially the role-playing video game genre.
+                D&D stands for Dungeons & Dragons, which is a popular tabletop role-playing game (RPG) created by Gary Gygax and Dave Arneson. 
+                It was first published in 1974 and has since become one of the most influential and enduring games in the history of tabletop gaming.
+                In Dungeons & Dragons, players take on the roles of characters in a fantasy world, typically portrayed as medieval or magical settings. 
+                One player serves as the Dungeon Master (DM) who acts as the storyteller, referee, and narrator, guiding the game and describing the world, non-player characters (NPCs), and situations the players encounter.
+                The game is played with a combination of storytelling, improvisation, and dice rolling. Players create their characters (something you can do easily <a class="hover:underline" href="./charactercreator">Here!</a>) 
+                by choosing a race (such as human, elf, dwarf, etc.) and a class (like wizard, rogue, fighter, etc.), which determine the character's abilities and skills. As the game progresses, characters go on adventures, 
+                solve puzzles, battle monsters, and gain experience points (XP) to become more powerful. The outcome of actions and events in the game is often determined by rolling polyhedral dice, (you can read more about dice below) 
+                such as the iconic 20-sided die (d20), which adds an element of chance and unpredictability to the gameplay. Dungeons & Dragons is cherished by many for its immersive storytelling, 
+                creative freedom, and social interaction among players. It has a large and dedicated community that continues to create new content, adventures, and campaigns for players to enjoy.
                 </p>
             </div>
         </section>
 
-        <section class="p-8 mx-16 mb-4 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
+        <section class="p-8 mx-6 mb-4 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
             <div class="flex justify-between items-center transition-all duration-300 ease-in-out">
                 <h1 class="font-semibold text-xl">How do dice work?</h1>
                 <img class="h-3 transition-all duration-300 ease-in-out" src="./assets/img/dropdown.png" alt="Dropdown Icon">
             </div>
             <div class="max-h-0 transition-all duration-300 ease-in-out overflow-hidden text-left">
                 <p>
-                Dice in Dungeons & Dragons are used for just about everything. You have six different kinds of dice, a d4, d6, d8, d10, d12, and d20. 
-                You use the d20 the most as it's used in situations such as talking, fighting, sneaking, searching, athletic situations and so much more. 
-                The rest of the dice are all used specifically when called upon in fights.
+                In Dungeons & Dragons (D&D), dice are an essential component of the game mechanics, used to introduce an element of chance and randomness into the various actions and events that take place during the game. Different types of dice are used, each represented by the letter "d" followed by the number of sides on the die. The most common dice used in D&D are the four-sided die (d4), six-sided die (d6), eight-sided die (d8), ten-sided die (d10), twelve-sided die (d12), and twenty-sided die (d20). There is also a percentile die (d100), which is actually two ten-sided dice, one representing the tens digit and the other representing the ones digit (commonly shown as a d10 and a d10 marked from 00 to 90).
+                Here's a breakdown of how these dice are used in D&D:
+                <ul>
+                    <li class="p-2"><span class="font-semibold">d4:</span> This four-sided die is often used to determine small amounts of damage or other minor outcomes.</li>
+                    <li class="p-2"><span class="font-semibold">d6:</span> The six-sided die is one of the most familiar dice used in many games. In D&D, it is commonly used to determine weapon damage, certain character abilities, and other simple tasks.</li>
+                    <li class="p-2"><span class="font-semibold">d8:</span> The eight-sided die is frequently used for calculating damage, healing amounts, and certain spell effects.</li>
+                    <li class="p-2"><span class="font-semibold">d10:</span> This ten-sided die is used in various contexts, such as determining damage, certain character abilities, and percentile rolls.</li>
+                    <li class="p-2"><span class="font-semibold">d12:</span> The twelve-sided die is usually used to determine damage from certain powerful weapons and abilities.</li>
+                    <li class="p-2"><span class="font-semibold">d20:</span> The twenty-sided die is the most iconic and crucial die in D&D. It is the primary die used for determining the success or failure of most actions, combat rolls, saving throws, skill checks, and other pivotal moments in the game. Characters' core attributes (like Strength, Dexterity, etc.) and various bonuses are added to or subtracted from the d20 roll to determine the overall result.</li>
+                    <li class="p-2"><span class="font-semibold">d100:</span> The percentile die, or d100, is used for percentile rolls, which are necessary for certain rare or critical events, such as determining the likelihood of a rare item appearing or the success of an extraordinary task.</li>
+                </ul>
+                In the game, the Dungeon Master (DM) describes the situation, and the players often declare their intended actions. The DM then calls for the relevant dice rolls to determine the outcomes based on the players' choices and the game's rules. The element of chance provided by the dice adds excitement, unpredictability, and risk to the game, making each session unique and memorable.
                 </p>
             </div>
         </section>
 
-        <section class="p-8 mx-16 mb-20 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
+        <section class="p-8 mx-6 mb-20 max-w-4xl border rounded-lg select-none hover:cursor-pointer" onclick="accordion(this)">
             <div class="flex justify-between items-center transition-all duration-300 ease-in-out">
                 <h1 class="font-semibold text-xl">How do I make a character?</h1>
                 <img class="h-3 transition-all duration-300 ease-in-out" src="./assets/img/dropdown.png" alt="Dropdown Icon">
@@ -74,12 +87,12 @@
                 <p>
                 Check out our easy character creator here: <a class="hover:underline" href="./charactercreator">Click Me!</a>
                 <br>
-                Making a character in Dungeons & Dragons is one of the greatest parts of the game. It involves your imagination and some dice. 
-                If you are new to the game, the best way to start is deciding what race your character will be as well as the class it will be playing. 
+                Making a character in Dungeons & Dragons is one of the greatest parts of the game. It involves your imagination and the roll of some dice.
+                If you are new to the game, the best way to start is deciding what race your character will be as well as the class you will be playing. 
                 Then you will get your stats by rolling dice and deciding which stats you want your character to be strongest in. 
                 After you have all of your stats the DM (dungeon master) will help you find the skills you are proficient in and calculate any other odds and ends. 
-                Then you will decide which weapons and or spells your character will use. You can decide to design your character on paper by drawing 
-                or finding a reference or you can use your imagination and start the game!
+                Then you will decide which weapons and/or spells your character will use. You can decide to design your character on paper by drawing, 
+                finding a reference, or you can just use your imagination and start the game!
                 </p>
             </div>
         </section>
