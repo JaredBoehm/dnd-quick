@@ -10,7 +10,10 @@
         * {
             font-family: 'Lugrasimo', cursive;
         }
-        img {
+        @page { /* This is a fix for chrome's default print settings being annoying */
+            size: letter;
+        }
+        img { /* Fixes a tailwind default where img elements max out at 100% */
             max-width: none !important;
         }
     </style>
