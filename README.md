@@ -12,15 +12,23 @@ Navigate to the following [URL](https://jaredboehm.github.io/dnd-quick/) to acce
 
 Once on the landing page you can click the drop downs to learn more about the D&D and D&D Quick. When you're ready click *"Create Character"* and pick a name (or hit the random button!), then select your class and race, and finally *"Roll Dice"* to simulate the dice rolling process and generate random base stats for your character. You can save any created characters and then view them by clicking *"View Saved Characters"*, selecting a saved character will open up a print window where you can print an automatically generated standard character sheet based on your choices!
 
-## Contributors
+## Core Contributors
 - [Connor Bishop](https://github.com/crypticsurfer)
 - [Tim Morgan](https://github.com/tmorgan-dev)
 - [Michael Miazza](https://github.com/FullStackCodingEngineer)
 - [Jared Boehm](https://github.com/JaredBoehm)
 
+## How To Contribute
+Simply clone the repo to your local device, tailwind is currently served through a CDN for ease of development, so there are no external dependencies to install.
+
+Feel free to fork or open up a pull request!
+
+
 ## License
 
-NA
+D&D Quick is released under the terms of the [MIT License](https://github.com/JaredBoehm/dnd-quick/blob/main/LICENSE)
+
+The D&D Logo is a trademark of Wizards of the Coast LLC, a subsidiary of Hasbro, Inc.
 
 
 ## Screenshots
